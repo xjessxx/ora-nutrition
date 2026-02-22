@@ -1,4 +1,5 @@
 'use client';
+import NutritionRecommendations from './NutritionRecommendations.tsx';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -113,6 +114,10 @@ export default function Sidebar({
                 rows={4}
               />
             </div>
+            <NutritionRecommendations
+          goal={nutritionGoals.goal}
+          dietaryRestrictions={nutritionGoals.dietaryRestrictions}
+        />
 
             {/* Info Box */}
             <div className="bg-cyan-50 border-2 border-cyan-200 rounded-lg p-4">
@@ -122,6 +127,7 @@ export default function Sidebar({
                 long-term nutrition knowledge!
               </p>
             </div>
+            
           </div>
 
           {/* Save Button */}
